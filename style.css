@@ -1,0 +1,223 @@
+/* Reset & font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #cce7ff, #ffffff);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- LOGIN PAGE --- */
+.login-container {
+  max-width: 360px;
+  margin: 100px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.login-container h1 {
+  margin-bottom: 5px;
+  color: #004080;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #0073e6;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #0073e6;
+  box-shadow: 0 0 5px #0073e6;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background: #0073e6;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.login-container button:hover {
+  background: #005bb5;
+}
+
+.error-msg {
+  color: #d8000c;
+  margin-top: 10px;
+}
+
+/* --- CLOUD ANIMASI --- */
+.animated-clouds {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cloud {
+  background: white;
+  background: radial-gradient(circle at 30% 30%, #fff, #d9eaff);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  opacity: 0.9;
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.1));
+  animation-timing-function: linear;
+}
+
+.cloud1 {
+  width: 100px;
+  height: 60px;
+  left: -150px;
+  animation-name: moveClouds;
+  animation-duration: 40s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  top: 20px;
+}
+
+.cloud2 {
+  width: 120px;
+  height: 70px;
+  left: -300px;
+  animation-name: moveClouds;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  top: 50px;
+}
+
+.cloud3 {
+  width: 90px;
+  height: 50px;
+  left: -220px;
+  animation-name: moveClouds;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  top: 10px;
+}
+
+@keyframes moveClouds {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+/* --- DASHBOARD --- */
+header {
+  background: #004080;
+  color: white;
+  padding: 20px 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: #0066cc;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background: #003d66;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+#pengaduanForm textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+#pengaduanForm button {
+  margin-top: 10px;
+  padding: 12px 25px;
+  border: none;
+  background: #0073e6;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#pengaduanForm button:hover {
+  background: #005bb5;
+}
+
+#statusPengaduan {
+  margin-top: 15px;
+  font-weight: bold;
+  color: green;
+}

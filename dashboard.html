@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - SI Layanan Masyarakat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Kelurahan Kepenuhan Tengah</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="#" onclick="showPage('beranda')">Beranda</a></li>
+        <li><a href="#" onclick="showPage('pengajuan')">Pengajuan Surat</a></li>
+        <li><a href="#" onclick="showPage('pengaduan')">Pengaduan</a></li>
+        <li><a href="#" onclick="showPage('status')">Status Permohonan</a></li>
+        <li><a href="#" onclick="showPage('profil')">Profil Warga</a></li>
+        <li><a href="#" onclick="logout()">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="beranda" class="page active">
+      <h2>Beranda</h2>
+      <p>Selamat datang di Sistem Informasi Layanan Masyarakat Kelurahan Kepenuhan Tengah.</p>
+    </section>
+
+    <section id="pengajuan" class="page">
+      <h2>Pengajuan Surat</h2>
+      <p>Fitur pengajuan surat akan segera hadir.</p>
+    </section>
+
+    <section id="pengaduan" class="page">
+      <h2>Pengaduan</h2>
+      <form id="pengaduanForm">
+        <textarea id="isiPengaduan" rows="5" placeholder="Tulis pengaduan Anda di sini..." required></textarea><br />
+        <button type="submit">Kirim Pengaduan</button>
+      </form>
+      <div id="statusPengaduan"></div>
+    </section>
+
+    <section id="status" class="page">
+      <h2>Status Permohonan</h2>
+      <p>Daftar status permohonan akan ditampilkan di sini.</p>
+    </section>
+
+    <section id="profil" class="page">
+      <h2>Profil Warga</h2>
+      <p>Informasi profil warga akan ditampilkan di sini.</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
